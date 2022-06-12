@@ -1,3 +1,184 @@
+.ucet {
+    max-width: 250px;
+    width: 25%;
+    min-width: 200px;
+    background: #2a2a2a;
+    padding: 5px 15px;
+    margin: 5px;
+}
+.ucet div {
+    display: flex;
+
+}
+.ucet div.high {
+    justify-content: space-between;
+}
+.sub {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 5em;
+}
+.row p{
+    margin: 5px 0;
+    color: #aaa;
+}
+.granade {
+    background: black;
+    width: 1px;
+    margin: 20px;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin: 0;
+    overflow-x: hidden;
+}
+.disk-box {
+    display: flex;
+    flex-basis: | auto;
+    flex-wrap: wrap;
+    width: 60vw;
+    max-width: 1400px;
+    margin-left: 40vw;
+}
+.opt:hover .last {
+    display: none;
+}
+.body {
+    color: white;
+    background: #202020;
+}
+.white {
+    background-color: #fff !important;
+}
+.white-sel {
+    background-color: #ddd !important;
+}
+.ucet .white, .ucet .white-sel {
+    color: black;
+}
+.white .row p, .white-sel .row p {
+    color: black;
+}
+.white .selected p, .white-sel .selected p {
+    color: #f00 !important;
+}
+.white-btn {
+    background-color: #ddd !important;
+    color: black;
+}
+.body-dark {
+    color: black;
+    background: #f0f0f0;
+}
+.rozvaha {
+    width: 30vw;
+    padding: 0 20px;
+    margin: 5px 10px;
+    max-width: 300px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+    min-width: min-content;
+}
+.rovaha * {
+    text-align: center;
+}
+.ucet .super {
+    justify-content: space-between;
+}
+.ucet .super p {
+    margin: 5px 0;
+}
+.vr-t {
+    border-top: 3px solid whitesmoke;
+}
+.vr-b {
+    border-bottom: 3px solid whitesmoke;
+}
+.opt:hover {
+    background-color: #777;
+}
+.opt button{
+    padding: 8px 10px !important;
+    margin: 0;
+    display: none;
+}
+.selected p{
+    color: #ff8888 !important;
+}
+.opt:hover button{
+    display: block;
+}
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom p {
+    justify-content: space-between;
+    display: flex;
+    margin: 5px;
+}
+.bottom button {
+    width: 100%;
+}
+.bottom button:hover {
+    cursor: pointer;
+}
+.snav {
+    background: #000;
+}
+.b-sel {
+    background: #000;
+}
+.opt:hover {
+    cursor: pointer;
+}
+input, button {
+    color: #ddd;
+    text-align: center;
+    background-color: #222;
+    border: 0;
+    padding: 5px;
+}
+.col {
+    width: 30px;
+}
+.col-lg {
+    width: 100px
+}
+.rozvaha .show {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 2.5px;
+    height: 60vh;
+}
+.opt button {
+    padding: 0 10px;
+}
+.opt button:hover {
+    background: #a22;
+    cursor: pointer;
+}
+.rozvaha .show .opt, .nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+.nav {
+    font-weight: bold;
+    padding: 0 40px 0 10px;
+}
+.nav *, .opt * {
+    margin: 5px 0;
+}
 .App {
   text-align: center;
 }
