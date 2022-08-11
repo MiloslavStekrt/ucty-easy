@@ -1,6 +1,5 @@
 .ucet {
     max-width: 250px;
-    width: 25%;
     min-width: 200px;
     background: #2a2a2a;
     padding: 5px 15px;
@@ -20,7 +19,7 @@
 .row {
     display: flex;
     justify-content: space-between;
-    width: 5em;
+    width: 6em;
 }
 .row p{
     margin: 5px 0;
@@ -36,15 +35,12 @@ body {
     justify-content: space-between;
     margin: auto;
     margin: 0;
-    overflow-x: hidden;
-}
+    overflow-x: hidden; }
 .disk-box {
     display: flex;
     flex-basis: | auto;
     flex-wrap: wrap;
-    width: 60vw;
-    max-width: 1400px;
-    margin-left: 40vw;
+    margin-left: 350px;
 }
 .opt:hover .last, .opt:hover .first{
     display: none;

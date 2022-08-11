@@ -88,26 +88,26 @@ function Add({setState, state, money, thema, operations, selected, setSelected, 
             <DataList />
             <datalist id="empty"></datalist>
             <p>
-                <label for="cost">Cena</label>
+                <label htmlFor="cost">Cena</label>
                 {cost != "NaN" ? cost : ""}
                 <input className={thema ? "col-lg": "col-lg white-btn"} id="cost" placeholder="Cena"
                 value={value.cost} onChange={e => setValue(
                     {cost: e.target.value, md: value.md, d: value.d})}/>
             </p>
             <p>
-                <label for="md">MD</label>
+                <label htmlFor="md">MD</label>
                 <span hidden={edit}>
                     <input type="checkbox" name="mdon" id="permd" checked={DPH[0]} onChange={e => setDPH([!DPH[0], false])}/>
-                    <label for="permd">DPH</label>
+                    <label htmlFor="permd">DPH</label>
                 </span>
                 <input list="account-UCTO" className={thema ? "col-lg": "col-lg white-btn"} placeholder="MD"
                 id="md" value={value.md} onChange={e => changeMD(e)}/>
             </p>
             <p>
-                <label for="d">D</label>
+                <label htmlFor="d">D</label>
                 <span hidden={edit}>
                     <input type="checkbox" name="don" id="perd" checked={DPH[1]} onChange={e => setDPH([false, !DPH[1]])}/>
-                    <label for="perd">DPH</label>
+                    <label htmlFor="perd">DPH</label>
                 </span>
                 <input list="account-UCTO" className={thema ? "col-lg": "col-lg white-btn"} placeholder="D"
                 id="d" value={value.d} onChange={e => changeD(e)} />

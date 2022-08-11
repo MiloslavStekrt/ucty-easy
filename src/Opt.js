@@ -34,21 +34,30 @@ function Opt({opt, i, operations, setSelect, setOperation, sel, thema, money, h,
         opts[i] = old;
         setOperation(opts)
     }
+    const base = 5;
     function money_10m(cost) {
-        let many = money(cost);
-        return `${String.fromCharCode(160).repeat(10-many.length - (cost/1000 >= 1? 2: 0))}${many}` 
+        let ans = "";
+
+        let edit_number = String(parseInt(cost));
+        for (let i=edit_number.length; i>0; i-=3) {
+            ans = edit_number.substring(i-3, i) + "\u00a0" + ans;
+        }
+        return `${String.fromCharCode(160).repeat(ans.length - base)}${ans}` 
     }
 
     return (
-        <div className={sel == i+1 ? thema ? "opt snav": "opt snav white-sel" : "opt"} onClick={changeSelected}>
-            <p class="first">{i+1}</p> 
-            <p className="cost between">
+        <tr className={sel == i+1 ? thema ? "opt snav": "opt snav white-sel" : "opt"} onClick={changeSelected}>
+            <td class="first">{i+1}</td> 
+            <td className="between">
                 <button onClick={e => moveUP(e)} value={i}>&uarr;</button>
                 <button onClick={e => moveDOWN(e)} value={i}>&darr;</button>
+
+            </td>
+            <td className="cost">
                 {money_10m(opt.cost)}
-            </p> <p>{opt.md}</p> <p class="last">{opt.d}</p>
+            </td> <td>{opt.md}</td> <td class="last">{opt.d}</td>
             <button onClick={e => del_that(e)} value={i}>&times;</button>
-        </div>
+        </tr>
     )
 }
 export default Opt;

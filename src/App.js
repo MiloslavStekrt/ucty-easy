@@ -127,16 +127,20 @@ function App() {
                     <button onClick={back}>← zpet</button>
                     <button onClick={opt_clear}>Vycistit</button>
                 </h1>
-                <div className="nav vr-b">
-                    <p>N</p> <p>Cena</p> <p>MD</p> <p>D</p>
-                </div>
-                <div className="show">
-                    { operations.map((opt, i) => 
-                        <Opt opt={opt} i={i}
-                            operations={operations} setSelect={setSelected} h={history} sh={setHistory}
-                            setOperation={setOperations} sel={selected} thema={thema} money={formatMoney} />
-                    )}
-                </div>
+                <table className='show'>
+                    <thead>
+                        <tr className="nav vr-b">
+                            <td>N</td> <td>Cena</td> <td>MD</td> <td>D</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { operations.map((opt, i) => 
+                            <Opt opt={opt} i={i}
+                                operations={operations} setSelect={setSelected} h={history} sh={setHistory}
+                                setOperation={setOperations} sel={selected} thema={thema} money={formatMoney} />
+                        )}
+                    </tbody>
+                </table>
                 <Add money={formatMoney} setState={setOperations} state={operations} thema={thema} h={history} sh={setHistory}
                     operations={operations} selected={selected} setOperations={setOperations} setSelected={setSelected}/>
             </section>
