@@ -128,12 +128,10 @@ function App() {
                     <button onClick={opt_clear}>Vycistit</button>
                 </h1>
                 <table className='show'>
-                    <thead>
-                        <tr className="nav vr-b">
-                            <td>N</td> <td>Cena</td> <td>MD</td> <td>D</td>
-                        </tr>
-                    </thead>
                     <tbody>
+                        <tr className="nav vr-b">
+                            <td></td><td>N</td> <td>Cena</td> <td>MD</td> <td>D</td>
+                        </tr>
                         { operations.map((opt, i) => 
                             <Opt opt={opt} i={i}
                                 operations={operations} setSelect={setSelected} h={history} sh={setHistory}

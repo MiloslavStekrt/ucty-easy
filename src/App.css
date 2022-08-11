@@ -42,9 +42,6 @@ body {
     flex-wrap: wrap;
     margin-left: 350px;
 }
-.opt:hover .last, .opt:hover .first{
-    display: none;
-}
 .body {
     color: white;
     background: #202020;
@@ -101,18 +98,24 @@ body {
     background-color: #777;
 }
 .opt button{
-    padding: 10 0 !important;
+    padding: 40% 5px;
     margin: 0;
+}
+.opt button.hide {
     display: none;
 }
 .selected p{
     color: #ff8888 !important;
 }
-.opt:hover button{
-    display: block;
-    padding: 0 5;
+.p-58 {
+    padding: 60% 8px !important;
 }
-.opt:hover div.between {
+table, tbody {
+    padding: 0;
+    border: 0 solid white;
+    border-spacing: 0;
+}
+div.between {
     display: flex;
 }
 .opt:hover p.cost {
@@ -163,24 +166,24 @@ input, button {
     padding-right: 2.5px;
     height: 50%;
 }
-.opt button {
-    padding: 0 10px;
-}
 .opt button:hover {
     background: #a22;
     cursor: pointer;
 }
-.rozvaha .show .opt, .nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px 0 10px;
-}
 .nav {
     font-weight: bold;
     padding: 0 40px 0 10px;
+    text-align: center;
+}
+.nav * {
+    text-align: center !important;
+}
+.side-acc {
+    width: 50px;
+    text-align: center;
 }
 .nav *, .opt * {
-    margin: 0;
+    text-align: right;
 }
 .App {
   text-align: center;
@@ -212,8 +215,8 @@ input, button {
   color: #61dafb;
 }
 
-div.between {
-    display: none;
+.between {
+    width: 40px;
 }
 
 @keyframes App-logo-spin {

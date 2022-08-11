@@ -37,13 +37,13 @@ function Add({setState, state, money, thema, operations, selected, setSelected, 
             return;
         } 
         let opts = [{
-            cost: parseFloat(value.cost),
+            cost: parseInt(value.cost) || 0,
             md: value.md,
             d: value.d
         }];
         if (DPH[0]) {
             let x = {
-                cost: parseInt(value.cost * 0.21),
+                cost: parseInt((parseInt(value.cost) || 0) * 0.21),
                 md: "343",
                 d: value.d
             };
@@ -51,7 +51,7 @@ function Add({setState, state, money, thema, operations, selected, setSelected, 
             sh([...h, ["add", value], ["add", x]]);
         } else if (DPH[1]) {
             let x = {
-                cost: parseInt(value.cost * 0.21),
+                cost: parseInt((parseInt(value.cost) || 0) * 0.21),
                 md: value.md,
                 d: "343"
             }
