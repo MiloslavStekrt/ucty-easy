@@ -130,7 +130,7 @@ function App() {
                 <table className='show'>
                     <tbody>
                         <tr className="nav vr-b">
-                            <td></td><td>N</td> <td>Cena</td> <td>MD</td> <td>D</td>
+                            <td>N</td><td></td> <td>Cena</td> <td>MD</td> <td>D</td>
                         </tr>
                         { operations.map((opt, i) => 
                             <Opt opt={opt} i={i}

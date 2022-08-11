@@ -34,28 +34,15 @@ function Opt({opt, i, operations, setSelect, setOperation, sel, thema, money, h,
         opts[i] = old;
         setOperation(opts)
     }
-    const base = 1;
-    function money_10m(cost) {
-        let ans = "";
-        if (cost > 1) {
-            let edit_number = String(parseInt(cost));
-            for (let i=edit_number.length; i>0; i-=3) {
-                ans = edit_number.substring(i-3, i) + "\u00a0" + ans;
-            }
-        }
-
-        return `${String.fromCharCode(160).repeat((ans.length || base) - base)}${ans}` 
-    }
-
     return (
         <tr className={sel == i+1 ? thema ? "opt snav": "opt snav white-sel" : "opt"} onClick={changeSelected}>
+            <td className="first">{i+1}</td> 
             <td className="between">
                 <button onClick={e => moveUP(e)} value={i}>&uarr;</button>
                 <button onClick={e => moveDOWN(e)} value={i}>&darr;</button>
             </td>
-            <td className="first">{i+1}</td> 
             <td className="cost">
-                {money_10m(opt.cost)}
+                {money(opt.cost)}
             </td> <td className="side-acc">{opt.md}</td> <td className="last side-acc">{opt.d}</td>
             <button className="p-58" onClick={e => del_that(e)} value={i}>&times;</button>
         </tr>
