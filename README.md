@@ -1,4 +1,4 @@
-# Ucty Easy
+# Ucty Easy (REACT Version old)
 This project is oriented for teacher to show their students basics from
 finance world.
 
